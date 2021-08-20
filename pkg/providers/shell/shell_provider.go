@@ -187,19 +187,9 @@ func (si *shellInstance) Start(timeout time.Duration) (string, error) {
 	return "", nil
 }
 
-func (si *shellInstance) Destroy(timeout time.Duration) error {
+func (si *shellInstance) Destroy(_ time.Duration) error {
 	logrus.Infof("Destroying cluster  %s", si.id)
-
-	context, cancel := context.WithTimeout(context.Background(), timeout)
-	defer cancel()
-	attempts := si.config.RetryCount
-	for {
-		_, err := si.shellInterface.RunCmd(context, fmt.Sprintf("destroy-%d", si.config.RetryCount-attempts), si.stopScript, nil)
-		if err == nil || attempts == 0 {
-			return err
-		}
-		attempts--
-	}
+	return nil
 }
 
 func (si *shellInstance) GetRoot() string {

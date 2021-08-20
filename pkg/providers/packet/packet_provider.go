@@ -558,72 +558,8 @@ func (pi *packetInstance) findFacilities() ([]string, error) {
 	return facilitiesList, nil
 }
 
-func (pi *packetInstance) Destroy(timeout time.Duration) error {
+func (pi *packetInstance) Destroy(_ time.Duration) error {
 	logrus.Infof("Destroying cluster  %s", pi.id)
-
-	ctx, cancel := context.WithTimeout(context.Background(), timeout)
-	defer cancel()
-
-	if pi.client != nil {
-		if pi.sshKey != nil {
-			response, err := pi.client.SSHKeys.Delete(pi.sshKey.ID)
-			pi.manager.AddLog(pi.id, "delete-sshkey", fmt.Sprintf("%v\n%v\n%v", pi.sshKey, response, err))
-		}
-
-		_, file, err := pi.manager.OpenFile(pi.id, "destroy-cluster")
-		if err != nil {
-			return err
-		}
-		defer func() { _ = file.Close() }()
-		log := utils.NewLogger(file)
-
-		log.Printf("Starting Delete of cluster %v\n", pi.id)
-		iteration := 0
-		for {
-			alive := map[string]*packngo.Device{}
-			for key, devID := range pi.devices {
-				device, _, err := pi.client.Devices.Get(devID, nil)
-				if err != nil {
-					if iteration == 0 {
-						msg := fmt.Sprintf("%v-%v Error accessing device Error: %v", pi.id, devID, err)
-						logrus.Error(msg)
-						log.Println(msg)
-					} // else, if not first iteration and there is no device, just continue.
-					continue
-				}
-				if device.State != provisioningState && device.State != queuedState {
-					response, err := pi.client.Devices.Delete(devID, true)
-					if err != nil {
-						log.Printf("delete-device-error-%s => %v\n%v\n", key, response, err)
-						logrus.Errorf("%v Failed to delete device %v", pi.id, devID)
-					} else {
-						log.Printf("delete-device-success-%s => %v\n%v\n", key, response, err)
-						logrus.Infof("%v Packet delete device send ok %v", pi.id, devID)
-					}
-				}
-				// Put as alive or some different state
-				alive[key] = device
-
-				msg := fmt.Sprintf("Device status %v %v %v", key, devID, device.State)
-				log.Println(msg)
-				logrus.Infof("%v-%v", pi.id, msg)
-			}
-			iteration++
-			if len(alive) == 0 {
-				break
-			}
-			select {
-			case <-time.After(10 * time.Second):
-				continue
-			case <-ctx.Done():
-				msg := fmt.Sprintf("Timeout for destroying cluster devices %v %v", pi.devices, ctx.Err())
-				log.Println(msg)
-				return errors.Errorf("err: %v", msg)
-			}
-		}
-		log.Printf("Devices destroy complete %v\n", pi.devices)
-		logrus.Infof("Destroy Complete: %v", pi.id)
-	}
 	return nil
 }
 
