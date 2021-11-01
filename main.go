@@ -8,9 +8,13 @@ import (
 	"github.com/networkservicemesh/cloudtest/pkg/commands"
 )
 
+const buildID = 1
+
 func main() {
 	logrus.SetFormatter(&nested.Formatter{})
 	logrus.SetLevel(logrus.TraceLevel)
+
+	logrus.New().Infof("Test build: %d", buildID)
 
 	commands.ExecuteCloudTest()
 }
