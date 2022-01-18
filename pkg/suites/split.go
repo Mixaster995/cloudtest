@@ -20,10 +20,10 @@ import (
 	"os"
 	"strings"
 
-	"github.com/networkservicemesh/cloudtest/pkg/execmanager"
-	"github.com/networkservicemesh/cloudtest/pkg/model"
-	"github.com/networkservicemesh/cloudtest/pkg/suites/parse"
-	"github.com/networkservicemesh/cloudtest/pkg/suites/testentry"
+	"github.com/Mixaster995/cloudtest/pkg/execmanager"
+	"github.com/Mixaster995/cloudtest/pkg/model"
+	"github.com/Mixaster995/cloudtest/pkg/suites/parse"
+	"github.com/Mixaster995/cloudtest/pkg/suites/testentry"
 )
 
 const (

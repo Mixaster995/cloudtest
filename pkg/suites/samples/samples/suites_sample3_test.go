@@ -21,7 +21,7 @@ import (
 
 	"github.com/stretchr/testify/suite"
 
-	"github.com/networkservicemesh/cloudtest/pkg/suites/samples/dependencies"
+	"github.com/Mixaster995/cloudtest/pkg/suites/samples/dependencies"
 )
 
 func TestLibEntryPoint1(t *testing.T) {

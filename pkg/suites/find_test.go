@@ -26,7 +26,7 @@ import (
 	"github.com/stretchr/testify/require"
 	"gopkg.in/yaml.v2"
 
-	"github.com/networkservicemesh/cloudtest/pkg/suites"
+	"github.com/Mixaster995/cloudtest/pkg/suites"
 )
 
 func testResults() map[string][]string {

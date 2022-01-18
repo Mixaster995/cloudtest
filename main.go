@@ -5,7 +5,7 @@ import (
 	"github.com/sirupsen/logrus"
 	_ "k8s.io/client-go/plugin/pkg/client/auth/gcp" // This is required for GKE authentication to work properly
 
-	"github.com/networkservicemesh/cloudtest/pkg/commands"
+	"github.com/Mixaster995/cloudtest/pkg/commands"
 )
 
 const buildID = 1

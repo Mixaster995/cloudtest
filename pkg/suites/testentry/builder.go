@@ -21,9 +21,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/networkservicemesh/cloudtest/pkg/execmanager"
-	"github.com/networkservicemesh/cloudtest/pkg/model"
-	"github.com/networkservicemesh/cloudtest/pkg/suites/parse"
+	"github.com/Mixaster995/cloudtest/pkg/execmanager"
+	"github.com/Mixaster995/cloudtest/pkg/model"
+	"github.com/Mixaster995/cloudtest/pkg/suites/parse"
 )
 
 // Builder is a builder class to build model.TestEntry from parse.TestEvent sequence

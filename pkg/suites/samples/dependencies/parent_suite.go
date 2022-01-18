@@ -17,7 +17,7 @@
 package dependencies
 
 import (
-	"github.com/networkservicemesh/cloudtest/pkg/suites/samples/dependencies/nested"
+	"github.com/Mixaster995/cloudtest/pkg/suites/samples/dependencies/nested"
 )
 
 // ParentSuite comment

@@ -25,7 +25,7 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/networkservicemesh/cloudtest/pkg/config"
+	"github.com/Mixaster995/cloudtest/pkg/config"
 )
 
 // KubernetesValidator - a validator to check periodically of cluster livenes.

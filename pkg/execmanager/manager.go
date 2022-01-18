@@ -25,7 +25,7 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"github.com/networkservicemesh/cloudtest/pkg/utils"
+	"github.com/Mixaster995/cloudtest/pkg/utils"
 )
 
 // ExecutionManager - allow to manage indexed files output per category.

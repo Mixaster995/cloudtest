@@ -24,8 +24,8 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/networkservicemesh/cloudtest/pkg/config"
-	"github.com/networkservicemesh/cloudtest/pkg/utils"
+	"github.com/Mixaster995/cloudtest/pkg/config"
+	"github.com/Mixaster995/cloudtest/pkg/utils"
 )
 
 // RunHealthChecks - Start goroutines with health check probes

@@ -24,8 +24,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/networkservicemesh/cloudtest/pkg/model"
-	"github.com/networkservicemesh/cloudtest/pkg/suites/lookup"
+	"github.com/Mixaster995/cloudtest/pkg/model"
+	"github.com/Mixaster995/cloudtest/pkg/suites/lookup"
 )
 
 const noneParseFlag = 0

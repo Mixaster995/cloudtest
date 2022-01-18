@@ -24,10 +24,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/networkservicemesh/cloudtest/pkg/config"
-	"github.com/networkservicemesh/cloudtest/pkg/execmanager"
-	"github.com/networkservicemesh/cloudtest/pkg/tests"
-	"github.com/networkservicemesh/cloudtest/pkg/utils"
+	"github.com/Mixaster995/cloudtest/pkg/config"
+	"github.com/Mixaster995/cloudtest/pkg/execmanager"
+	"github.com/Mixaster995/cloudtest/pkg/tests"
+	"github.com/Mixaster995/cloudtest/pkg/utils"
 )
 
 func TestClusterInstanceStates(t *testing.T) {

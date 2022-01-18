@@ -25,9 +25,9 @@ import (
 	"github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/require"
 
-	"github.com/networkservicemesh/cloudtest/pkg/commands"
-	"github.com/networkservicemesh/cloudtest/pkg/config"
-	"github.com/networkservicemesh/cloudtest/pkg/utils"
+	"github.com/Mixaster995/cloudtest/pkg/commands"
+	"github.com/Mixaster995/cloudtest/pkg/config"
+	"github.com/Mixaster995/cloudtest/pkg/utils"
 )
 
 func TestRestartRequest(t *testing.T) {

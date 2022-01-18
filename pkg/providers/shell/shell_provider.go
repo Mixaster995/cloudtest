@@ -29,12 +29,12 @@ import (
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
 
-	"github.com/networkservicemesh/cloudtest/pkg/config"
-	"github.com/networkservicemesh/cloudtest/pkg/execmanager"
-	"github.com/networkservicemesh/cloudtest/pkg/k8s"
-	"github.com/networkservicemesh/cloudtest/pkg/providers"
-	"github.com/networkservicemesh/cloudtest/pkg/shell"
-	"github.com/networkservicemesh/cloudtest/pkg/utils"
+	"github.com/Mixaster995/cloudtest/pkg/config"
+	"github.com/Mixaster995/cloudtest/pkg/execmanager"
+	"github.com/Mixaster995/cloudtest/pkg/k8s"
+	"github.com/Mixaster995/cloudtest/pkg/providers"
+	"github.com/Mixaster995/cloudtest/pkg/shell"
+	"github.com/Mixaster995/cloudtest/pkg/utils"
 )
 
 const (

@@ -23,9 +23,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/networkservicemesh/cloudtest/pkg/utils"
+	"github.com/Mixaster995/cloudtest/pkg/utils"
 
-	"github.com/networkservicemesh/cloudtest/pkg/providers/packet/packethelper"
+	"github.com/Mixaster995/cloudtest/pkg/providers/packet/packethelper"
 
 	"github.com/packethost/packngo"
 	"github.com/sirupsen/logrus"

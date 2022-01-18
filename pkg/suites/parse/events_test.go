@@ -22,7 +22,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/networkservicemesh/cloudtest/pkg/suites/parse"
+	"github.com/Mixaster995/cloudtest/pkg/suites/parse"
 )
 
 func TestEvents(t *testing.T) {
