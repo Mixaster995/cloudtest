@@ -1,4 +1,4 @@
-module github.com/Mixaster995/cloudtest
+module github.com/networkservicemesh/cloudtest
 
 go 1.15
 
